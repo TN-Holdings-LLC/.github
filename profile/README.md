@@ -1,6 +1,8 @@
 # TN Holdings LLC
 **Advancing the "R=0" Frontier in Quantum Control and Systems Engineering.**
 
+ ![Performance Benchmark](https://github.com/TN-Holdings-LLC/psf-zero/blob/main/docs/12.png)
+
 TN Holdings LLC is a specialized research and holding entity focused on deterministic system architectures. Our core mission is to eliminate computational friction (Resistance → 0) through geometric and manifold-aware methodologies.
 
 ### Core Projects
