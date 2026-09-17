@@ -6,6 +6,8 @@ TN Holdings LLC is a specialized research and holding entity focused on determin
 
 ![PSF-Zero vs. Qiskit at scale](https://github.com/TN-Holdings-LLC/psf-zero/blob/main/docs/Figure_1.png)
 
+![PSF-Zero vs Qiskit at the coupling-map cliff: compile time (log scale) and two-qubit gate count, 6x7 and 8x8 grids](docs/Figure_2.png)
+
 ### Verified Results — PSF-Zero
 
 | Comparison | Condition | Result |
