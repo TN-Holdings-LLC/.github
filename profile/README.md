@@ -1,44 +1,57 @@
 # TN Holdings LLC
 
-**Advancing the "R=0" Frontier in Quantum Control and Systems Engineering.**
+**Quantum compilation by formula, and a benchmark that asks what a quantum-AI model costs.**
 
-TN Holdings LLC is a specialized research and holding entity focused on deterministic system architectures. Our core mission is to eliminate computational friction (Resistance → 0) through geometric and manifold-aware methodologies.
+We build two things in the open, and test both the same way: predictions are locked in git before a run, losses are
+published next to wins, and every result is given twice, as the benchmark custom would quote it and as someone
+running it on a device would see it.
 
-![PSF-Zero vs. Qiskit at scale](https://github.com/TN-Holdings-LLC/psf-zero/blob/main/docs/Figure_1.png)
+## Projects
 
+- **[TOQB](https://github.com/TN-Holdings-LLC/TOQB)**, a task-oriented quantum benchmark. Its variational-loop
+  scenario asks: for the same money (QPU seconds and dollars), which compiler returns the best model?
+- **[PSF-Zero](https://github.com/TN-Holdings-LLC/psf-zero)**, a Qiskit-compatible compiler that builds circuits by
+  formula, with no search: chains, rings and lattices that embed in the device, and the device's native fractional
+  gates. Every other circuit is refused with a reason. `compile_template()` builds once and rebinds angles in about
+  a millisecond, for training loops.
+- **R0-GPCLayer**, geometric preconditioning for classical neural networks. *Early stage; no published benchmarks
+  yet.*
 
+## Quantum AI: same money, which model? (TOQB, pre-registered, scored)
 
-### Verified Results — PSF-Zero
+6 qubits, 8 layers, a classifier trained with SPSA; Qiskit level 2 against PSF-Zero's template. **Simulation with a
+device noise model (FakeFez); nothing here ran on a device.**
 
-| Comparison | Condition | Result |
-| :--- | :---: | :---: |
-| vs. Qiskit (`optimization_level=3`) | General dense circuits, 15–1000 qubits | **2.5–5x faster** |
-| vs. TKET (`FullPeepholeOptimise`) | Same circuit family, 10–160 qubits | **150–270x faster** |
-| vs. Qiskit (`optimization_level=3`) | Coupling map nearly/fully saturated, 42–64 qubits | **279–544x faster** |
-| vs. Qiskit (`optimization_level=3`), real IBM hardware | 15 qubits, 10 job submissions | Fidelity statistically on par; **14–16x faster compile** |
-| Output determinism | 300 trials, identical input | **Zero variance** — always the same circuit |
+| run | what the benchmark headline says | what a user should also know |
+| :--- | :--- | :--- |
+| Budget: 2 minutes of QPU ($192), 1,000 seeds | PSF-Zero's model is more accurate at the budget: 0.533 against 0.494, better in 624 of 1,000 seeds | at this budget both models are weak: classical models reach 0.73-0.77 |
+| Reach: 1,000 iterations, 200 seeds | PSF-Zero reaches 0.70 accuracy in 300 iterations against 400, for $1,133 against $1,549 | the gain is in cost and speed; the end points are close (0.724 against 0.704) |
+| Standard 2: 200 seeds, SPSA tuned so both models learn | PSF-Zero's signal (margin) is 1.32 x larger | accuracy did not differ: 0.702 against 0.701; the primary prediction was refuted |
 
-<sub>Figures are medians/ranges across the conditions in each row, not single best-case
-runs, and are backed by raw data and reproducible scripts in the
-[psf-zero repository](https://github.com/TN-Holdings-LLC/psf-zero). Output gate-count
-parity depends on matching `entangling_basis` to the target hardware; full conditions
-and caveats (including the depth trade-off at saturated coupling maps) are documented
-there.</sub>
+Full records: [TOQB `results/`](https://github.com/TN-Holdings-LLC/TOQB/tree/main/results).
 
-### Core Projects
+**Now testing (no results yet):** training entirely on a GPU twin of the device, thousands of loops, then one
+device job whose outcome the twin predicts in advance; and whether CUDA-Q (as the simulation engine) and PSF-Zero
+(as the compiler) together beat each alone. Results will be posted here when they are scored, whichever way they go.
 
-- **[PSF-Zero](https://github.com/TN-Holdings-LLC/psf-zero)** — Deterministic two-qubit
-  gate synthesis for Qiskit via closed-form (Cartan/KAK) decomposition. Benchmarks and
-  methodology above are drawn from this project's own published, reproducible record.
-- **R0-GPCLayer** — Geometric preconditioning for classical neural networks. *Early
-  stage; no published benchmarks yet.*
+## Compilation: where PSF-Zero wins, and where it does not (real IBM devices)
 
-### Vision
+| | result |
+| :--- | :--- |
+| Ising chains built by formula | PSF-Zero's side won 19 of 23 pairs on three devices, fidelity ratio 1.21 (geometric mean; worst 0.94) |
+| Time-aware gate order | fidelity 1.17-1.51 x higher, 8 of 8, in two pre-registered tests on two devices |
+| QAOA and Barabasi-Albert graphs (placement decides) | **lost**: 9 of 25 pairs, ratio 0.78; this family is left to others, with our losing data published |
+| General circuits (880 Benchpress tests) | about level with Qiskit level 2 in two-qubit gates (1.046 x), and slower |
+| Two-qubit synthesis, `compile()` (release 2026-10-14.1) | 2.5-5 x faster than Qiskit level 3 on two-qubit-block circuits; on 10 jobs on two IBM devices, the same fidelity with 14-16 x shorter compile time |
 
-From quantum manifolds to classical AI, we aim to provide a verifiable, frictionless
-foundation for next-generation computation — grounded in reproducible measurement, not
-projection.
+Details, conditions and every losing case: [psf-zero README](https://github.com/TN-Holdings-LLC/psf-zero) and its
+`docs/findings/`.
 
-### Contact
+## Papers
+
+- VF2 Cliff: [10.5281/zenodo.22977930](https://doi.org/10.5281/zenodo.22977930)
+- PSF-Zero: [10.5281/zenodo.22978090](https://doi.org/10.5281/zenodo.22978090)
+
+## Contact
 
 contact.love.os.architect@proton.me
