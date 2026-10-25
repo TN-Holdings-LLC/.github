@@ -49,8 +49,12 @@ Details, conditions and every losing case: [psf-zero README](https://github.com/
 
 ## Papers
 
+## Papers
+
 - VF2 Cliff: [10.5281/zenodo.22977930](https://doi.org/10.5281/zenodo.22977930)
 - PSF-Zero: [10.5281/zenodo.22978090](https://doi.org/10.5281/zenodo.22978090)
+- QML Confounds: [10.5281/zenodo.23600811](https://doi.org/10.5281/zenodo.23600811)
+
 
 ## Contact
 
