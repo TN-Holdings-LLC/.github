@@ -49,12 +49,13 @@ Details, conditions and every losing case: [psf-zero README](https://github.com/
 
 ## Papers
 
-## Papers
+All preprints on Zenodo; records, declarations and raw counts in [TOQB](https://github.com/TN-Holdings-LLC/TOQB).
 
-- VF2 Cliff: [10.5281/zenodo.22977930](https://doi.org/10.5281/zenodo.22977930)
-- PSF-Zero: [10.5281/zenodo.22978090](https://doi.org/10.5281/zenodo.22978090)
-- QML Confounds: [10.5281/zenodo.23600811](https://doi.org/10.5281/zenodo.23600811)
-
+1. **Ordering Sensitivity in Subgraph-Isomorphism Layout Search** (VF2 cliff): [10.5281/zenodo.22977930](https://doi.org/10.5281/zenodo.22977930)
+2. **PSF-Zero: An Analytic Two-Qubit Gate Synthesizer Combined with a Verified, Ordering-Aware Layout Search**: [10.5281/zenodo.22978090](https://doi.org/10.5281/zenodo.22978090)
+3. **When a Quantum Compiler Looks Like a Better Learner: Confounds in Quantum Machine Learning Comparisons** (v1.3, 2026-10-31): [10.5281/zenodo.23826596](https://doi.org/10.5281/zenodo.23826596)
+4. **Folding a Ring onto Heavy-Hex: Formula-Built Schedules with Provable Gate Counts** (v1.3, 2026-10-31): [10.5281/zenodo.23826764](https://doi.org/10.5281/zenodo.23826764)
+5. **Readable Depth Without the Calibration Map: Formula Placement on Heavy-Hex Devices, and a Defect the Calibration Does Not Show** (v1.0, 2026-10-31): [10.5281/zenodo.23826351](https://doi.org/10.5281/zenodo.23826351)
 
 ## Contact
 
