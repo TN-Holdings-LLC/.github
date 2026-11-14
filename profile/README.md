@@ -16,7 +16,7 @@ running it on a device would see it.
 - **[psf-os](https://github.com/TN-Holdings-LLC/psf-os)**, a self-checking layer between a user's circuit and an IBM
   heavy-hex device: it places the circuit by formula, adds checks made of the user's own circuit to the same job
   (floor, mirror, ring sentinel), keeps a list of what it found dead, and returns an answer card. It reads the
-  coupling graph and the failed elements, never a calibration quality number. *Working code, not a release.*
+  coupling graph and the failed elements, never a calibration quality number. *Release 0.1.0 (2026-11-14).*
 - **[psf-os-lab-notebook](https://github.com/TN-Holdings-LLC/psf-os-lab-notebook)**, the declared device tests behind
   the papers: each declared before its calibration was fetched, answers sealed until the verdicts, raw counts
   committed, every result re-scorable without IBM. It also keeps the original task-oriented compiler benchmark.
