@@ -62,6 +62,7 @@ All preprints on Zenodo; records, declarations and raw counts in [psf-os-lab-not
 5. **Readable Depth Without the Calibration Map: Formula Placement on Heavy-Hex Devices, and a Defect the Calibration Does Not Show** (v1.1, 2026-10-31): [10.5281/zenodo.23827536](https://doi.org/10.5281/zenodo.23827536)
 6. **What Sets the Readable Depth of a Placed Ring, and How Far a Self-Checking Layer Pushes It: Scan, Register, Avoid and Repair on Three Heavy-Hex Devices Without the Calibration Map** (v1.0, 2026-11-02): [10.5281/zenodo.23883938](https://doi.org/10.5281/zenodo.23883938)
 7. **Exact Answers, No Map, No Mitigation: User-Written Circuits through a Placement-Only OS on IBM Heron r2 Devices** (v1, 2026-11-08): [10.5281/zenodo.24046673](https://doi.org/10.5281/zenodo.24046673)
+8. **Readable Quantum Dynamics Without Error Mitigation: Dual-Unitary Chains up to 91 Qubits and 3D Lattice Tests on IBM Heron Devices** (v1.0, 2026-11-11): [10.5281/zenodo.24136512](https://doi.org/10.5281/zenodo.24136512)
 
 ## Contact
 
