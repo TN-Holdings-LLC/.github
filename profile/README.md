@@ -16,8 +16,11 @@ running it on a device would see it.
 - **[psf-os](https://github.com/TN-Holdings-LLC/psf-os)**, a self-checking layer between a user's circuit and an IBM
   heavy-hex device: it places the circuit by formula, adds checks made of the user's own circuit to the same job
   (floor, mirror, ring sentinel), keeps a list of what it found dead, and returns an answer card. It reads the
-  coupling graph and the failed elements, never a calibration quality number. *Release 0.1.1 (2026-11-14); DOI
-  [10.5281/zenodo.24211404](https://doi.org/10.5281/zenodo.24211404).*
+  coupling graph and the failed elements, never a calibration quality number. Since 0.2, real-time control: circuits
+  that measure in the middle and act on the result while they run, each with its uncontrolled twin in the same job, and
+  a loop that diagnoses the device and picks the next round's circuit unattended. *Release 0.2.0 (2026-11-19); DOI
+  [10.5281/zenodo.24367846](https://doi.org/10.5281/zenodo.24367846) (all releases:
+  [10.5281/zenodo.24211404](https://doi.org/10.5281/zenodo.24211404)).*
 - **[psf-os-lab-notebook](https://github.com/TN-Holdings-LLC/psf-os-lab-notebook)**, the declared device tests behind
   the papers: each declared before its calibration was fetched, answers sealed until the verdicts, raw counts
   committed, every result re-scorable without IBM. It also keeps the original task-oriented compiler benchmark.
@@ -63,6 +66,8 @@ All preprints on Zenodo; records, declarations and raw counts in [psf-os-lab-not
 6. **What Sets the Readable Depth of a Placed Ring, and How Far a Self-Checking Layer Pushes It: Scan, Register, Avoid and Repair on Three Heavy-Hex Devices Without the Calibration Map** (v1.0, 2026-11-02): [10.5281/zenodo.23883938](https://doi.org/10.5281/zenodo.23883938)
 7. **Exact Answers, No Map, No Mitigation: User-Written Circuits through a Placement-Only OS on IBM Heron r2 Devices** (v1, 2026-11-08): [10.5281/zenodo.24046673](https://doi.org/10.5281/zenodo.24046673)
 8. **Readable Quantum Dynamics Without Error Mitigation: Dual-Unitary Chains up to 91 Qubits and 3D Lattice Tests on IBM Heron Devices** (v1.0, 2026-11-11): [10.5281/zenodo.24136512](https://doi.org/10.5281/zenodo.24136512)
+9. **What Makes Raw Quantum Dynamics Readable? The Share of Signal Kept, Across 179 Results on IBM Heron** (v1, 2026-11-16): [10.5281/zenodo.24278888](https://doi.org/10.5281/zenodo.24278888)
+10. **Decisions No Correction of the Uncontrolled Circuit Can Reach: Real-Time Control on IBM Heron, Declared Before the Data** (v1, 2026-11-19): [10.5281/zenodo.24367001](https://doi.org/10.5281/zenodo.24367001)
 
 ## Contact
 
