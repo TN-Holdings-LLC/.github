@@ -18,8 +18,10 @@ running it on a device would see it.
   (floor, mirror, ring sentinel), keeps a list of what it found dead, and returns an answer card. It reads the
   coupling graph and the failed elements, never a calibration quality number. Since 0.2, real-time control: circuits
   that measure in the middle and act on the result while they run, each with its uncontrolled twin in the same job, and
-  a loop that diagnoses the device and picks the next round's circuit unattended. *Release 0.2.0 (2026-11-19); DOI
-  [10.5281/zenodo.24367846](https://doi.org/10.5281/zenodo.24367846) (all releases:
+  a loop that diagnoses the device and picks the next round's circuit unattended. Since 0.3, a qubit that waits in |1>
+  during a mid-circuit read is parked in |0> by default (on the device, two nights: +0.03 to +0.04 against the same
+  circuit unparked in the same job). *Release 0.3.0 (2026-11-21); DOI
+  [10.5281/zenodo.24416958](https://doi.org/10.5281/zenodo.24416958) (all releases:
   [10.5281/zenodo.24211404](https://doi.org/10.5281/zenodo.24211404)).*
 - **[psf-os-lab-notebook](https://github.com/TN-Holdings-LLC/psf-os-lab-notebook)**, the declared device tests behind
   the papers: each declared before its calibration was fetched, answers sealed until the verdicts, raw counts
