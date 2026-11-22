@@ -20,8 +20,9 @@ running it on a device would see it.
   that measure in the middle and act on the result while they run, each with its uncontrolled twin in the same job, and
   a loop that diagnoses the device and picks the next round's circuit unattended. Since 0.3, a qubit that waits in |1>
   during a mid-circuit read is parked in |0> by default (on the device, two nights: +0.03 to +0.04 against the same
-  circuit unparked in the same job). *Release 0.3.0 (2026-11-21); DOI
-  [10.5281/zenodo.24416958](https://doi.org/10.5281/zenodo.24416958) (all releases:
+  circuit unparked in the same job). Since 0.3.1, a waiting qubit that is more likely in |1> than in |0>, entangled
+  ones included, is parked too (on a third device: +0.097 and +0.025 on two RUS chains against 0.3.0 in one job).
+  *Release 0.3.1 (2026-11-22); DOI [10.5281/zenodo.24438701](https://doi.org/10.5281/zenodo.24438701) (all releases:
   [10.5281/zenodo.24211404](https://doi.org/10.5281/zenodo.24211404)).*
 - **[psf-os-lab-notebook](https://github.com/TN-Holdings-LLC/psf-os-lab-notebook)**, the declared device tests behind
   the papers: each declared before its calibration was fetched, answers sealed until the verdicts, raw counts
